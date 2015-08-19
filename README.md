@@ -2,7 +2,7 @@
 WordPress plugin. Remove query parameters from asset links (JavaScript and CSS) and use inline dot notation instead. (This requires changes to Apache's .htaccess file, which are made automatically when activating the plugin.)
 
 ## Usage
-Install the plugin. Clear any caches and check that your CSS and JavaScript files are still correctly loaded in the browser. If not, then make sure that the appropriate rules have been added to your .htaccess files.
+Install the plugin. Clear any caches and check that your CSS and JavaScript files are still correctly loaded in the browser. If not, then make sure that the appropriate rules have been added to your .htaccess files. (This usually happens when activating the plugin. This rule is also removed from .htaccess when deactivating the plugin.)
 
 	RewriteRule ^(.+)\.(\d+)\.(js|css)$ /$1.$3 [L] [QSA,L]
 
