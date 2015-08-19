@@ -12,11 +12,6 @@ class MHM_WordPress_Inlineversioning {
 
 	public $key 	= 'mhm-wordpress-inlineversioning';
 	public $version = '1.0';
-	
-	function dump($var,$die=false){
-		echo '<pre>' .print_r($var,1). '</pre>';
-		if($die){die();}
-	}//dump
 
 	public function __construct(){
 		add_filter( 'style_loader_src', array(&$this, 'parse_uri'), 10, 2 );
