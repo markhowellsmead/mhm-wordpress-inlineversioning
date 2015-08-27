@@ -1,15 +1,33 @@
-# Inline version numbering for WordPress
-WordPress plugin. Remove query parameters from asset links (JavaScript and CSS) and use inline dot notation instead. (This requires changes to Apache's .htaccess file, which are made automatically when activating the plugin.)
+=== Plugin Name ===
+Contributors: markhowellsmead
+Donate link: http://permanenttourist.ch/
+Tags: versioning, assets, css, javascript
+Requires at least: 4.2
+Tested up to: 4.3
+Stable tag: 4.3
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-## Usage
-Install the plugin. Clear any caches and check that your CSS and JavaScript files are still correctly loaded in the browser. If not, then make sure that the appropriate rules have been added to your .htaccess files. (This usually happens when activating the plugin. This rule is also removed from .htaccess when deactivating the plugin.)
+Remove query parameters from asset links (JavaScript and CSS) and use inline dot notation instead.
 
-	RewriteRule ^(.+)\.(\d+)\.(js|css)$ /$1.$3 [L] [QSA,L]
+== Description ==
 
-##Author
-Mark Howells-Mead | www.permanenttourist.ch | Since August 2015
+Remove query parameters from asset links (JavaScript and CSS) and use inline dot notation instead. (This requires changes to Apache's .htaccess file, which are made automatically when activating the plugin.)
 
-##License
-Use this code freely, widely and for free. Provision of this code provides and implies no guarantee.
+== Installation ==
 
-Please respect the GPL v2 licence, which is available via http://www.gnu.org/licenses/gpl-2.0.html
+1. Upload the plugin folder to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+
+== Changelog ==
+
+= 1.2 =
+* Only modify resource src if it contains `?ver=`
+* Tweak PHP code spacing
+* Modify plugin URI and key to reflect adoption in WordPress plugin repository.
+
+= 1.1 =
+* Update code to use `add_rewrite_rule` function.
+
+= 1.0 =
+* Initial version
