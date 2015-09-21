@@ -17,9 +17,24 @@ Remove query parameters from asset links (JavaScript and CSS) and use inline dot
 == Installation ==
 
 1. Upload the plugin folder to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
+2. Make a backup copy of the .htaccess file in the root directory of your site, if there is one.
+3. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 2.2 =
+* Use the `admin-init` hook to update the .htaccess file whenever the version number changes. (e.g. when updating the plugin from the repository.) This is in addition to the modification which takes place when the plugin is activated.
+* Minor corrections to README.
+
+= 2.1.1 =
+* Temporarily remove .htaccess update on plugin update, due to a bug.
+
+= 2.1 =
+* Update .htaccess when the plugin is updated from the plugin repository.
+* Correct version number across all files in the plugin.
+
+= 2.0 =
+* Use better code solution by Dominik Schilling. (https://dominikschilling.de/880/) No copyright breach intended: just making this plugin code available through the WordPress Plugin Directory.
 
 = 1.2 =
 * Only modify resource src if it contains `?ver=`
