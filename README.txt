@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: markhowellsmead
-Donate link: http://permanenttourist.ch/
+Donate link: https://www.paypal.me/mhmli
 Tags: versioning, assets, css, javascript
 Requires at least: 4.2
-Tested up to: 4.3
-Stable tag: 4.3
+Tested up to: 4.4
+Stable tag: 4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Remove query parameters from asset links (JavaScript and CSS) and use inline dot
 
 == Description ==
 
-Remove query parameters from asset links (JavaScript and CSS) and use inline dot notation instead. (This requires changes to Apache's .htaccess file, which are made automatically when activating the plugin.)
+Remove query parameters from asset links (JavaScript and CSS) and use inline dot notation instead. (This requires changes to Apache's .htaccess file.)
 
 == Installation ==
 
@@ -21,6 +21,17 @@ Remove query parameters from asset links (JavaScript and CSS) and use inline dot
 3. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 2.5 =
+* Remove htaccess rule when deactivating plugin.
+* Confirm functionality in WordPress 4.4.
+
+= 2.4 =
+* Ensure that .htaccess rules are maintained cleanly when accessing Permalink section in wp-admin.
+* Thanks to http://wordpress.stackexchange.com/users/1685/thedeadmedic for the assistance.
+
+= 2.3 =
+* Extend regex pattern in .htaccess to recognize version numbers containing dots and dashes.
 
 = 2.2 =
 * Use the `admin-init` hook to update the .htaccess file whenever the version number changes. (e.g. when updating the plugin from the repository.) This is in addition to the modification which takes place when the plugin is activated.
